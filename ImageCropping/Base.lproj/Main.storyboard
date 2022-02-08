@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ImageCropping" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="AXZ-Mb-02z">
+                                <rect key="frame" x="16" y="257.5" width="382" height="381"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iXx-3z-RG7">
+                                        <rect key="frame" x="0.0" y="0.0" width="382" height="342"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7Ir-KG-9cS">
+                                                <rect key="frame" x="0.0" y="0.0" width="382" height="342"/>
+                                                <color key="backgroundColor" red="0.59279795869999996" green="0.78039215689999997" blue="0.64001554599999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="7Ir-KG-9cS" secondAttribute="height" multiplier="1:1" constant="40" id="1Hf-e8-Xwm"/>
+                                            <constraint firstItem="7Ir-KG-9cS" firstAttribute="top" secondItem="iXx-3z-RG7" secondAttribute="top" id="70B-i8-wTv"/>
+                                            <constraint firstAttribute="bottom" secondItem="7Ir-KG-9cS" secondAttribute="bottom" id="jGQ-en-2iW"/>
+                                            <constraint firstAttribute="trailing" secondItem="7Ir-KG-9cS" secondAttribute="trailing" id="pE4-6G-8fk"/>
+                                            <constraint firstItem="7Ir-KG-9cS" firstAttribute="leading" secondItem="iXx-3z-RG7" secondAttribute="leading" id="tiH-PG-fm3"/>
+                                        </constraints>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rZ5-i2-jIb">
+                                        <rect key="frame" x="0.0" y="350" width="382" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Pick Image"/>
+                                        <connections>
+                                            <action selector="pickImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0hY-wM-Ahn"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="AXZ-Mb-02z" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5Sx-0v-DTt"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="AXZ-Mb-02z" secondAttribute="trailing" constant="16" id="eLs-VN-nx6"/>
+                            <constraint firstItem="AXZ-Mb-02z" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="oSU-N0-8Z9"/>
+                            <constraint firstItem="AXZ-Mb-02z" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="uZc-Hm-PFh"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageContainer" destination="iXx-3z-RG7" id="YRI-z6-F7A"/>
+                        <outlet property="imageView" destination="7Ir-KG-9cS" id="nO6-0G-WGp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="114" y="82"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
